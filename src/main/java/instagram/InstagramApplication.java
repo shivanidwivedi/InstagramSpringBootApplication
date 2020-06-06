@@ -1,12 +1,9 @@
 package instagram;
 
-import facebook4j.FacebookException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.io.IOException;
 
 /**
  * @author shivanidwivedi on 05/06/20
@@ -15,19 +12,15 @@ import java.io.IOException;
 @SpringBootApplication
 public class InstagramApplication {
     private static final Logger log = LoggerFactory.getLogger(InstagramApplication.class);
-    public static void main(String[] args) throws FacebookException, IOException {
+    public static void main(String[] args) {
         try {
-            InstagramCaller.instagramLogin();
-            log.info("Instagramlogin method");
+            log.info("Starting up application ...");
+            Instagram4jAPIInstance.getInstance(); //initiate
             SpringApplication.run(InstagramApplication.class, args);
 
         }
         catch (Exception e){
-            System.out.println(e);
+            log.error("Error during login: "+e);
         }
-        //insta.instagramLogin();
-        //insta.searchByHandle("shivani_dwivedi08");
-        //insta.getFeedForHashtag("travel");
-        //insta.sendRequest("http://localhost:8080/insta");
     }
 }

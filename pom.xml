@@ -11,7 +11,7 @@
     <groupId>com.example</groupId>
     <artifactId>rest-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>rest-service</name>
+    <name>controller-service</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
