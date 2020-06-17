@@ -22,8 +22,8 @@ public class Instagram4jAPIInstance {
     public static Instagram4j instagramLogin() {
         Instagram4j instagram = null;
         try {
-            instagram = Instagram4j.builder().username("*****")
-                    .password("*****").build();
+            instagram = Instagram4j.builder().username("****")
+                    .password("****").build();
             instagram.setup();
             instagram.login();
         }

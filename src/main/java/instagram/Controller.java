@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicLong;
 @RestController
 public class Controller {
     @GetMapping("/handle")
-    public InstagramUser user(@RequestParam(value = "name", defaultValue = "github") String handle) {
+    public InstagramUser user(@RequestParam(value = "name", defaultValue = "shivani_dwivedi08") String handle) {
         try {
             InstagramUser user = APICaller.userByHandle(handle);
             return user;
@@ -28,7 +28,7 @@ public class Controller {
         return null;
     }
     @GetMapping("/hashtag")
-    public InstagramFeedResult feed(@RequestParam(value = "hashtag", defaultValue = "travel") String hashtag) {
+    public InstagramFeedResult feed(@RequestParam(value = "hashtag", defaultValue = "github") String hashtag) {
         try {
             return APICaller.getFeedForHashtag(hashtag);
         }
