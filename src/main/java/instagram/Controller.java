@@ -15,6 +15,12 @@ import java.util.concurrent.atomic.AtomicLong;
  */
 @RestController
 public class Controller {
+    
+    @GetMapping("/hello")
+    public String hello(@RequestParam(value = "name", defaultValue = "Shivani") String name) {
+        return "Hello "+name;
+    }
+
     @GetMapping("/handle")
     public InstagramUser user(@RequestParam(value = "name", defaultValue = "shivani_dwivedi08") String handle) {
         try {
