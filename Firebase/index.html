@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-$END$
+<div id="container">
+    <div id="user-options">
+        <div>Chatting as: <span id="name"></span></div>
+        <div id="change-name">change name</div>
+    </div>
+
+<form id="message-form">
+    <input type="text" id="message-input" placeholder="message" required>
+    <button class="orange-button">send</button>
+</form>
+
+<div id="messages"></div>
+<button id="clear" class="purple-button">Clear All Messages</button>
+</div>
+<script src="app.js"></script>
 </body>
 </html>
